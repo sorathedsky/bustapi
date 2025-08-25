@@ -1,0 +1,21 @@
+[package]
+name = "bustapi"
+version = "0.1.0"
+edition = "2021"
+authors = ["GrandpaEJ"]
+
+[lib]
+name = "bustapi"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.19", features = ["extension-module"] }
+tokio = { version = "1.32", features = ["full"] }
+hyper = { version = "1.0", features = ["full", "http1", "server"] }
+hyper-util = { version = "0.1", features = ["tokio"] }
+http-body-util = "0.1"
+bytes = "1.5"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+futures = "0.3"
+pyo3-asyncio = { version = "0.19", features = ["tokio-runtime"] }
